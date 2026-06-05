@@ -608,15 +608,32 @@ text-align:left;
 }
 
 .order-form input,
-.order-form textarea{
+.order-form textarea,
+.order-form select{
 
-padding:14px;
+padding:16px;
 
 border:1px solid #ddd;
 
-border-radius:10px;
+border-radius:12px;
 
 font-size:16px;
+
+background:#fafafa;
+
+transition:.3s;
+
+}
+
+.order-form input:focus,
+.order-form textarea:focus,
+.order-form select:focus{
+
+outline:none;
+
+border-color:#c9a227;
+
+background:white;
 
 }
 
@@ -645,5 +662,19 @@ gap:15px;
 margin-top:30px;
 
 text-align:left;
+
+}
+
+.order-intro{
+
+max-width:600px;
+
+margin:20px auto 40px;
+
+line-height:1.8;
+
+color:#555;
+
+font-size:18px;
 
 }
