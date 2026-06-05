@@ -786,3 +786,52 @@ margin-bottom:15px;
     color: #666;
     line-height: 1.6;
 }
+
+
+/* ===== ORDER PAGE EMERGENCY FIX ===== */
+
+.order-section form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+}
