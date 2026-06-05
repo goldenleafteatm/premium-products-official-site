@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Misty Green | Golden Leaf</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="brand">
+Golden Leaf
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="product-page">
+
+<div class="product-gallery">
+
+<div class="gallery-container">
+
+<button
+class="gallery-btn left-btn"
+onclick="previousImage()">
+
+❮
+
+</button>
+
+<img
+id="mainImage"
+src="assets/images/products/misty-green/main.jpg"
+alt="Origin Black"
+class="main-product-image">
+
+<button
+class="gallery-btn right-btn"
+onclick="nextImage()">
+
+❯
+
+</button>
+
+</div>
+<div class="thumbnail-row">
+
+<img
+src="assets/images/products/misty-green/main.jpg"
+onclick="changeImage(this)"
+class="thumbnail">
+
+<img
+src="assets/images/products/misty-green/gallery1.jpg"
+onclick="changeImage(this)"
+class="thumbnail">
+
+<img
+src="assets/images/products/misty-green/gallery2.jpg"
+onclick="changeImage(this)"
+class="thumbnail">
+
+<img
+src="assets/images/products/misty-green/gallery3.jpg"
+onclick="changeImage(this)"
+class="thumbnail">
+
+</div>
+
+</div>
+
+<div class="product-info">
+
+<span class="product-badge">
+Premium Collection
+</span>
+  
+<span class="premium-tag">
+Premium Tea Collection
+</span>
+  
+<h1>Misty Green</h1>
+  <div class="gold-line"></div>
+
+<p class="price">
+₹XXX
+</p>
+
+<p class="product-description">
+
+A refreshing green tea crafted from carefully selected leaves, delivering a smooth taste and natural aroma.
+
+</p>
+
+<div class="feature-box">
+
+<div class="feature-item">
+🌿 Natural Ingredients
+</div>
+
+<div class="feature-item">
+🍃 Freshly Packed
+</div>
+
+<div class="feature-item">
+☕ Rich Aroma
+</div>
+
+</div>
+
+<h3>Product Details</h3>
+
+<div class="spec-card">
+
+<div class="spec-row">
+<span>Weight</span>
+<span>XXX g</span>
+</div>
+
+<div class="spec-row">
+<span>Packaging</span>
+<span>Premium Sealed Pack</span>
+</div>
+
+<div class="spec-row">
+<span>Category</span>
+<span>Tea</span>
+</div>
+
+</div>
+
+<div class="quantity-box">
+
+<label>Quantity</label>
+
+<input
+type="number"
+value="1"
+min="1">
+
+</div>
+
+<a href="order.html?product=Misty%20Green" class="btn">
+Order Now
+</a>
+  
+</div>
+
+</section>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
