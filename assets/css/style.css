@@ -690,3 +690,23 @@ text-align:center;
 margin-top:10px;
 
 }
+
+.order-form label{
+
+font-weight:600;
+
+color:#123524;
+
+margin-bottom:5px;
+
+}
+
+.order-form i{
+
+color:#c9a227;
+
+margin-right:10px;
+
+width:18px;
+
+}
