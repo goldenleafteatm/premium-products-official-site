@@ -50,121 +50,65 @@ you to confirm your order.
 
 </p>
   
-<form action="https://https://formspree.io/f/xnjynwlg" method="POST" onsubmit="return redirectAfterSubmit()">
-  
-<input type="hidden" name="_redirect" value="https://goldenleafteatm.github.io/premium-products-official-site/thank-you.html">
-<label>
-<i class="fa-solid fa-leaf"></i>
-Select Product
-</label>
+ <form action="https://formspree.io/f/xnjynwlg" method="POST" onsubmit="return redirectAfterSubmit()">
 
-<select name="Product" required>
+<div class="form-grid">
 
-<option value="">
-Choose a Product
-</option>
+  <div class="form-group">
+    <label><i class="fa-solid fa-leaf"></i> Select Product</label>
+    <select name="Product" required>
+      <option value="">Choose a Product</option>
+      <option value="Origin Black">Origin Black</option>
+      <option value="Misty Green">Misty Green</option>
+      <option value="Morning Mist">Morning Mist</option>
+      <option value="Ela Gold">Ela Gold</option>
+    </select>
+  </div>
 
-<option value="Origin Black">
-Origin Black
-</option>
+  <div class="form-group">
+    <label><i class="fa-solid fa-user"></i> Full Name</label>
+    <input type="text" name="Name" placeholder="Your Name" required>
+  </div>
 
-<option value="Misty Green">
-Misty Green
-</option>
+  <div class="form-group">
+    <label><i class="fa-solid fa-phone"></i> Phone Number</label>
+    <input type="tel" name="Phone" placeholder="Your Phone Number" required>
+  </div>
 
-<option value="Morning Mist">
-Morning Mist
-</option>
+  <div class="form-group">
+    <label><i class="fa-solid fa-location-dot"></i> City / Place</label>
+    <input type="text" name="Place" placeholder="Your City" required>
+  </div>
 
-<option value="Ela Gold">
-Ela Gold
-</option>
+  <div class="form-group full">
+    <label><i class="fa-solid fa-house"></i> Address</label>
+    <textarea name="Address" rows="4" placeholder="Your Address" required></textarea>
+  </div>
 
-</select>
-  
-<label>
-<i class="fa-solid fa-user"></i>
-Full Name
-</label>
-  
-<input
-type="text"
-name="Name"
-placeholder="Your Name"
-required>
+  <div class="form-group">
+    <label><i class="fa-solid fa-box"></i> Quantity</label>
+    <input type="number" name="Quantity" min="1" value="1" required>
+  </div>
 
-<label>
-<i class="fa-solid fa-phone"></i>
-Phone Number
-</label>
+  <div class="form-group full">
+    <label><i class="fa-solid fa-pen"></i> Additional Notes</label>
+    <textarea name="Notes" rows="4" placeholder="Anything you'd like us to know?"></textarea>
+  </div>
 
-<input
-type="tel"
-name="Phone"
-placeholder="Your Phone Number"
-required>
+  <div class="form-group full">
+    <p class="trust-message">
+      Your information is used only to process your order and contact you.
+    </p>
+  </div>
 
-<label>
-<i class="fa-solid fa-location-dot"></i>
-City / Place
-</label>
+  <div class="form-group full">
+    <button type="submit" class="btn">Place Order</button>
+  </div>
 
-<input
-type="text"
-name="Place"
-placeholder="Your City"
-required>
-
-<label>
-<i class="fa-solid fa-house"></i>
-Address
-</label>
-
-<textarea
-name="Address"
-rows="4"
-placeholder="Your Address"
-required></textarea>
-
-<label>
-<i class="fa-solid fa-box"></i>
-Quantity
-</label>
-
-<input
-type="number"
-name="Quantity"
-min="1"
-value="1"
-required>
-
-<label>
-<i class="fa-solid fa-pen"></i>
-Additional Notes
-</label>
-
-<textarea
-name="Notes"
-rows="4"
-placeholder="Anything you'd like us to know?"></textarea>
-
-  <p class="trust-message">
-
-Your information is used only
-to process your order and contact you.
-
-</p>
-
-<button
-type="submit"
-class="btn">
-
-Place Order
-
-</button>
+</div>
 
 </form>
-
+  
 </section>
 
   <script src="assets/js/main.js"></script>
