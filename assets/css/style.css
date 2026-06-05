@@ -544,4 +544,38 @@ right:10px;
 
 }
 
+.gold-line{
 
+width:80px;
+
+height:4px;
+
+background:#c9a227;
+
+margin:20px 0 25px;
+
+border-radius:10px;
+
+}
+
+.premium-tag{
+
+display:inline-block;
+
+background:#f8f5ee;
+
+color:#123524;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+border:1px solid #e0d9c8;
+
+}
