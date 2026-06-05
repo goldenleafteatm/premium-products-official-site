@@ -79,3 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+function redirectAfterSubmit() {
+
+    // small delay so Formspree gets the request
+    setTimeout(() => {
+        window.location.href = "thank-you.html";
+    }, 500);
+
+    return true; // allows form to submit normally
+}
