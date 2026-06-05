@@ -1,53 +1,67 @@
-const images = [
-
-"assets/images/products/origin-black/main.jpg",
-
-"assets/images/products/origin-black/gallery1.jpg",
-
-"assets/images/products/origin-black/gallery2.jpg",
-
-"assets/images/products/origin-black/gallery3.jpg"
-
-];
-
+let images = [];
 let currentImage = 0;
 
-function changeImage(image){
+function loadImages() {
 
-document.getElementById("mainImage").src =
-image.src;
+    const pageName = window.location.pathname
+        .split("/")
+        .pop()
+        .replace(".html", "");
 
+    images = [
+        `assets/images/products/${pageName}/main.jpg`,
+        `assets/images/products/${pageName}/gallery1.jpg`,
+        `assets/images/products/${pageName}/gallery2.jpg`,
+        `assets/images/products/${pageName}/gallery3.jpg`
+    ];
+
+    const mainImage = document.getElementById("mainImage");
+
+    if (mainImage) {
+        mainImage.src = images[0];
+    }
+
+    currentImage = 0;
 }
 
-function nextImage(){
+function nextImage() {
 
-currentImage++;
+    currentImage++;
 
-if(currentImage >= images.length){
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
 
-currentImage = 0;
-
+    document.getElementById("mainImage").src = images[currentImage];
 }
 
-document.getElementById("mainImage").src =
-images[currentImage];
+function previousImage() {
 
+    currentImage--;
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    document.getElementById("mainImage").src = images[currentImage];
 }
 
-function previousImage(){
+document.addEventListener("DOMContentLoaded", () => {
 
-currentImage--;
+    loadImages();
 
-if(currentImage < 0){
+    const params = new URLSearchParams(window.location.search);
 
-currentImage = images.length - 1;
+    const product = params.get("product");
 
-}
+    const productSelect =
+        document.querySelector('select[name="Product"]');
 
-document.getElementById("mainImage").src =
-images[currentImage];
+    if (product && productSelect) {
+        productSelect.value = product;
+    }
 
-}
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 
