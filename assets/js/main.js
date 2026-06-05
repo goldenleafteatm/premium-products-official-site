@@ -48,3 +48,20 @@ document.getElementById("mainImage").src =
 images[currentImage];
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const product = params.get("product");
+
+    const productSelect =
+        document.querySelector('select[name="Product"]');
+
+    if(product && productSelect){
+
+        productSelect.value = product;
+
+    }
+
+});
