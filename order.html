@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Place Order | Golden Leaf</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="brand">
+Golden Leaf
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="order-section">
+
+<h1>Place Your Order</h1>
+
+<p>
+Fill in the details below and our team will contact you shortly.
+</p>
+
+<form
+action="FORM_ENDPOINT_HERE"
+method="POST"
+class="order-form">
+
+<input
+type="hidden"
+name="_next"
+value="thank-you.html">
+
+<label>Product Name</label>
+
+<input
+type="text"
+name="Product"
+placeholder="Product Name"
+required>
+
+<label>Full Name</label>
+
+<input
+type="text"
+name="Name"
+placeholder="Your Name"
+required>
+
+<label>Phone Number</label>
+
+<input
+type="tel"
+name="Phone"
+placeholder="Your Phone Number"
+required>
+
+<label>City / Place</label>
+
+<input
+type="text"
+name="Place"
+placeholder="Your City"
+required>
+
+<label>Address</label>
+
+<textarea
+name="Address"
+rows="4"
+placeholder="Your Address"
+required></textarea>
+
+<label>Quantity</label>
+
+<input
+type="number"
+name="Quantity"
+min="1"
+value="1"
+required>
+
+<label>Additional Notes</label>
+
+<textarea
+name="Notes"
+rows="4"
+placeholder="Anything you'd like us to know?"></textarea>
+
+<button
+type="submit"
+class="btn">
+
+Place Order
+
+</button>
+
+</form>
+
+</section>
+
+</body>
+
+</html>
