@@ -79,3 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+function redirectAfterSubmit() {
+    setTimeout(() => {
+        window.location.href = "thank-you.html";
+    }, 500);
+    return true;
+}
