@@ -38,12 +38,31 @@ Golden Leaf
 
 <div class="product-gallery">
 
+<div class="gallery-container">
+
+<button
+class="gallery-btn left-btn"
+onclick="previousImage()">
+
+❮
+
+</button>
+
 <img
 id="mainImage"
 src="assets/images/products/origin-black/main.jpg"
 alt="Origin Black"
 class="main-product-image">
 
+<button
+class="gallery-btn right-btn"
+onclick="nextImage()">
+
+❯
+
+</button>
+
+</div>
 <div class="thumbnail-row">
 
 <img
@@ -72,6 +91,10 @@ class="thumbnail">
 
 <div class="product-info">
 
+<span class="product-badge">
+Premium Collection
+</span>
+
 <h1>Origin Black</h1>
 
 <p class="price">
@@ -80,21 +103,48 @@ class="thumbnail">
 
 <p class="product-description">
 
-REPLACE THIS WITH YOUR PRODUCT DESCRIPTION
+A bold and elegant black tea crafted
+for those who appreciate rich aroma,
+deep flavour and a naturally refreshing experience.
 
 </p>
 
-<h3>Specifications</h3>
+<div class="feature-box">
 
-<ul class="specs">
+<div class="feature-item">
+🌿 Natural Ingredients
+</div>
 
-<li>Weight: XXX g</li>
+<div class="feature-item">
+🍃 Freshly Packed
+</div>
 
-<li>Packaging: Premium Sealed Pack</li>
+<div class="feature-item">
+☕ Rich Aroma
+</div>
 
-<li>Category: Tea</li>
+</div>
 
-</ul>
+<h3>Product Details</h3>
+
+<div class="spec-card">
+
+<div class="spec-row">
+<span>Weight</span>
+<span>XXX g</span>
+</div>
+
+<div class="spec-row">
+<span>Packaging</span>
+<span>Premium Sealed Pack</span>
+</div>
+
+<div class="spec-row">
+<span>Category</span>
+<span>Tea</span>
+</div>
+
+</div>
 
 <div class="quantity-box">
 
@@ -107,12 +157,8 @@ min="1">
 
 </div>
 
-<a
-href="order.html"
-class="btn">
-
+<a href="order.html" class="btn">
 Order Now
-
 </a>
 
 </div>
