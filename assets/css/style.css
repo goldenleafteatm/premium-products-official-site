@@ -219,3 +219,39 @@ text-align:center;
 padding:25px;
 
 }
+
+.products-page{
+
+padding:80px 50px;
+
+text-align:center;
+
+}
+
+.products-page h1{
+
+margin-bottom:20px;
+
+color:#123524;
+
+}
+
+.collection-text{
+
+margin-bottom:50px;
+
+font-size:18px;
+
+}
+
+.price{
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#c9a227;
+
+margin:15px 0;
+
+}
