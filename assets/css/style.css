@@ -579,3 +579,49 @@ margin-bottom:20px;
 border:1px solid #e0d9c8;
 
 }
+
+
+.order-section{
+
+max-width:800px;
+
+margin:60px auto;
+
+padding:40px;
+
+text-align:center;
+
+}
+
+.order-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+margin-top:30px;
+
+text-align:left;
+
+}
+
+.order-form input,
+.order-form textarea{
+
+padding:14px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+.order-form button{
+
+margin-top:20px;
+
+}
