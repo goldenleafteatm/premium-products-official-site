@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Perpetua Custom";
+    src: url("../fonts/Perpetua-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
 *{
 margin:0;
 padding:0;
@@ -1137,4 +1144,10 @@ button.btn {
         padding: 0 15px;
         margin-bottom: 30px;
     }
+}
+
+.brand {
+    font-family: "Perpetua Custom", serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
