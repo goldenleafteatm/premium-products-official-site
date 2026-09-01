@@ -119,3 +119,171 @@ function addToCart(productName, price, image) {
 
     alert(productName + " has been added to your cart.");
 }
+
+/* =========================================
+   DISPLAY SHOPPING CART
+   ========================================= */
+
+function displayCart() {
+
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    if (!cartItems || !cartTotal) {
+        return;
+    }
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+            <div class="empty-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h2>Your Cart Is Empty</h2>
+                <p>Add some of our carefully crafted teas to get started.</p>
+
+                <a href="products.html" class="btn">
+                    Explore Our Teas
+                </a>
+            </div>
+        `;
+
+        cartTotal.textContent = "₹0";
+        updateCartCount();
+
+        return;
+    }
+
+    cart.forEach((item, index) => {
+
+        const itemTotal = item.price * item.quantity;
+
+        total += itemTotal;
+
+        cartItems.innerHTML += `
+
+            <div class="cart-item">
+
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                >
+
+                <div class="cart-item-info">
+
+                    <h3>${item.name}</h3>
+
+                    <p>
+                        Price: ₹${item.price}
+                    </p>
+
+                    <div class="cart-quantity">
+
+                        <button
+                            onclick="changeQuantity(${index}, -1)">
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            onclick="changeQuantity(${index}, 1)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <strong>
+                    ₹${itemTotal}
+                </strong>
+
+                <button
+                    class="remove-cart-item"
+                    onclick="removeFromCart(${index})">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                </button>
+
+            </div>
+        `;
+    });
+
+    cartTotal.textContent = "₹" + total;
+
+    updateCartCount();
+}
+
+
+/* =========================================
+   CHANGE QUANTITY
+   ========================================= */
+
+function changeQuantity(index, amount) {
+
+    cart[index].quantity += amount;
+
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+    }
+
+    saveCart();
+
+    displayCart();
+}
+
+
+/* =========================================
+   REMOVE PRODUCT
+   ========================================= */
+
+function removeFromCart(index) {
+
+    cart.splice(index, 1);
+
+    saveCart();
+
+    displayCart();
+}
+
+
+/* =========================================
+   CART COUNT
+   ========================================= */
+
+function updateCartCount() {
+
+    const cartCount = document.getElementById("cart-count");
+
+    if (!cartCount) {
+        return;
+    }
+
+    const count = cart.reduce(
+        (total, item) => total + item.quantity,
+        0
+    );
+
+    cartCount.textContent = count;
+}
+
+
+/* =========================================
+   LOAD CART
+   ========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    displayCart();
+
+    updateCartCount();
+
+});
+
