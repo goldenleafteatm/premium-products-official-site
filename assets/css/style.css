@@ -1151,3 +1151,58 @@ button.btn {
     font-weight: bold;
     letter-spacing: 1px;
 }
+
+/* =========================================
+   SHOPPING CART BUTTON
+   ========================================= */
+
+.cart-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 5%;
+    box-sizing: border-box;
+}
+
+.cart-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 1px solid currentColor;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.cart-button:hover {
+    transform: translateY(-2px);
+}
+
+#cart-count {
+    min-width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    .cart-button-container {
+        padding: 12px 20px;
+    }
+
+    .cart-button {
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+}
