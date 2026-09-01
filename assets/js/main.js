@@ -117,6 +117,59 @@ function addToCart(productName, price, image) {
 
     saveCart();
 
+    updateCartCount();
+
+    alert(productName + " added to cart!");
+}
+
+function updateCartCount() {
+
+    const cartCount = document.getElementById("cart-count");
+
+    if (!cartCount) return;
+
+    const count = cart.reduce(
+        (total, item) => total + item.quantity,
+        0
+    );
+
+    cartCount.textContent = count;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    updateCartCount();
+});
+
+
+/* =========================================
+   GOLDEN LEAF SHOPPING CART
+   ========================================= */
+
+let cart = JSON.parse(localStorage.getItem("goldenLeafCart")) || [];
+
+function saveCart() {
+    localStorage.setItem("goldenLeafCart", JSON.stringify(cart));
+}
+
+function addToCart(productName, price, image) {
+
+    const existingProduct = cart.find(
+        item => item.name === productName
+    );
+
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.push({
+            name: productName,
+            price: Number(price),
+            image: image,
+            quantity: 1
+        });
+    }
+
+    saveCart();
+
     alert(productName + " has been added to your cart.");
 }
 
