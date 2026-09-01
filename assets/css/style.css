@@ -1206,3 +1206,124 @@ button.btn {
         font-size: 11px;
     }
 }
+
+/* =========================================
+   SHOPPING CART PAGE
+   ========================================= */
+
+.cart-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.cart-section h1 {
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.cart-items {
+    margin-top: 40px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h3 {
+    font-family: "Cinzel", serif;
+    margin: 0 0 8px;
+}
+
+.cart-item-info p {
+    margin: 5px 0;
+}
+
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.remove-cart-item {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cart-summary {
+    margin-top: 35px;
+    padding: 25px;
+    text-align: right;
+    border-radius: 12px;
+}
+
+.cart-summary h2 {
+    font-family: "Cinzel", serif;
+}
+
+.cart-summary p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    .cart-section {
+        padding: 40px 15px;
+    }
+
+    .cart-section h1 {
+        font-size: 28px;
+    }
+
+    .cart-item {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .cart-item img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .cart-item-info h3 {
+        font-size: 15px;
+    }
+
+    .cart-summary {
+        text-align: center;
+    }
+
+}
