@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Place Order | Golden Leaf</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="brand">
+GOLDEN LEAF
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="order-section">
+
+<h1>Begin Your Order</h1>
+
+<div class="gold-line"></div>
+
+<p class="order-intro">
+
+Select your preferred tea and
+share your details with us.
+
+Our team will personally contact
+you to confirm your order.
+
+</p>
+  
+ <form action="https://formspree.io/f/xnjynwlg" method="POST" onsubmit="return redirectAfterSubmit()">
+
+<div class="form-grid">
+
+  <div class="form-group">
+    <label><i class="fa-solid fa-leaf"></i> Select Product</label>
+    <select name="Product" required>
+      <option value="">Choose a Product</option>
+      <option value="Origin Black">Origin Black</option>
+      <option value="Misty Green">Misty Green</option>
+      <option value="Morning Mist">Morning Mist</option>
+      <option value="Ela Gold">Ela Gold</option>
+      <option value="Spice Gold">Spice Gold</option>
+      <option value="Spice Gold">Ginga Gold</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label><i class="fa-solid fa-user"></i> Full Name</label>
+    <input type="text" name="Name" placeholder="Your Name" required>
+  </div>
+
+  <div class="form-group">
+    <label><i class="fa-solid fa-phone"></i> Phone Number</label>
+    <input type="tel" name="Phone" placeholder="Your Phone Number" required>
+  </div>
+
+  <div class="form-group">
+    <label><i class="fa-solid fa-location-dot"></i> City / Place</label>
+    <input type="text" name="Place" placeholder="Your City" required>
+  </div>
+
+  <div class="form-group full">
+    <label><i class="fa-solid fa-house"></i> Address</label>
+    <textarea name="Address" rows="4" placeholder="Your Address" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label><i class="fa-solid fa-box"></i> Quantity</label>
+    <input type="number" name="Quantity" min="1" value="1" required>
+  </div>
+
+  <div class="form-group full">
+    <label><i class="fa-solid fa-pen"></i> Additional Notes</label>
+    <textarea name="Notes" rows="4" placeholder="Anything you'd like us to know?"></textarea>
+  </div>
+
+  <div class="form-group full">
+    <p class="trust-message">
+      Your information is used only to process your order and contact you.
+    </p>
+  </div>
+
+  <div class="form-group full">
+    <button type="submit" class="btn">Place Order</button>
+  </div>
+
+</div>
+
+</form>
+  
+</section>
+
+    <a href="https://wa.me/918943013671" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+  
+  <script src="assets/js/main.js"></script>
+  
+</body>
+
+</html>
